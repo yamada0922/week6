@@ -300,10 +300,32 @@ $cyans: (
 // scss-docs-start theme-color-variables
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
+
+//自定義主色-100~-400
+$primary-100: #FFFDF5;
+$primary-200: #FFFBE5;
+$primary-300: #e8e3da;
+$primary-400: #6e6b67;
+
+$accent-100: #E0EFDE;
+$accent-200: #569573;
+$accent-300: #406C55;
+
+$neutral-100: #F8F9FA;
+$neutral-200: #DEE2E6;
+$neutral-300: #ADB5BD;
+$neutral-400: #6C757D;
+$neutral-500: #343A40;
+$neutral-600: #212529;
+
+$info: #4A72FF;
+$success: #2CC585;
+$warning: #FFB054;
+$danger: #D65F5F;
+//$success:       $green !default;
+//$info:          $cyan !default;
+//$warning:       $yellow !default;
+//$danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 // scss-docs-end theme-color-variables
@@ -312,6 +334,22 @@ $dark:          $gray-900 !default;
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
+
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "primary-300": $primary-300,
+  "primary-400": $primary-400,
+
+  "secondary-100": $accent-100,
+  "secondary-200": $accent-200,
+  "secondary-300": $accent-300,
+
+  "gray-100": $neutral-100,
+  "gray-200": $neutral-200,
+  "gray-300": $neutral-300,
+  "gray-400": $neutral-400,
+  "gray-500": $neutral-500,
+
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
@@ -378,7 +416,8 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+//$enable-rfs:                  true !default;
+$enable-rfs:                  false !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -409,12 +448,23 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
 $spacers: (
+  //0: 0,
+  //1: $spacer * .25,
+  //2: $spacer * .5,
+  //3: $spacer,
+  //4: $spacer * 1.5,
+  //5: $spacer * 3,
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
+  1: $spacer * 0.5,
+  2: $spacer * 0.75,
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  4: $spacer * 1.25,
+  5: $spacer * 1.5,
+  6: $spacer * 2.25,
+  7: $spacer * 2.5,
+  8: $spacer * 3,
+  9: $spacer * 3.75,
+  10: $spacer * 5
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -435,8 +485,10 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+//$body-color:                $gray-900 !default;
+$body-color:                $gray-800 !default;
+//$body-bg:                   $white !default;
+$body-bg:                   $primary-100 !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -603,7 +655,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: "Noto Serif TC",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -622,9 +674,11 @@ $font-weight-normal:          400 !default;
 $font-weight-medium:          500 !default;
 $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+//$font-weight-bolder:          bolder !default;
+$font-weight-bolder:          900 !default;
 
-$font-weight-base:            $font-weight-normal !default;
+//$font-weight-base:            $font-weight-normal !default;
+$font-weight-base: $font-weight-semibold !default;
 
 $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
@@ -650,10 +704,12 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+//$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom: 0 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+//$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-bolder !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
@@ -816,8 +872,10 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 
 // scss-docs-start btn-variables
 $btn-color:                   var(--#{$prefix}body-color) !default;
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
+//$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-y:               0.75rem !default;
+//$btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-x:               1.25rem !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
@@ -833,11 +891,13 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+// $btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight: $font-weight-bold !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity:        .65 !default;
+// $btn-disabled-opacity:       0.65 !default;
+$btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 
 $btn-link-color:              var(--#{$prefix}link-color) !default;
