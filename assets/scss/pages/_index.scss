@@ -30,3 +30,155 @@
   }
 }
 
+.mb-32 {
+  margin-bottom: 32px;
+}
+.gray-600 {
+  color: $gray-600;
+}
+.swiper a {
+  font-size: 20px;
+  line-height: 2;
+  color: #569573;
+  text-decoration: none;
+  font-weight: 700;
+}
+.swiper-slide {
+  border-bottom: 1px solid #6c757d;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+  @media (max-width: 576px) {
+    .swiper-slide img {
+      width: 51.4%;
+    }
+}
+}
+.swiper-pagination {
+  width: 232px;
+  position: relative;
+  @media (max-width: 996px) {
+  max-width: 232px;
+  width: 100%;
+}
+}
+.swiper-pagination::after {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background-color: #6c757d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-prev:hover {
+  background-color: #6c757d;
+}
+.swiper-button-disabled {
+  color: #dee2e6;
+  border-color: #dee2e6 !important;
+}
+.swiper-button-disabled:hover {
+  cursor: default;
+  background-color: initial !important;
+}
+.swiper-next:hover {
+  background-color: #6c757d;
+  color: #DEE2E6;
+}
+.only-staff {
+  background: #e8e3da;
+}
+.for-mobile {
+  @media (max-width: 996px) {
+    display: flex;
+    position: absolute;
+    bottom: -550px;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+}
+}
+.swiper-pagination-custom {
+  @media (max-width: 996px) {
+    margin-bottom: 0;
+}
+}
+
+
+
+.custom-background::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 324px;
+  width: 217px;
+  height: 81px; /* Height of the first image */
+  background: url('../assets/images/bg-1.png') no-repeat left bottom;
+  background-size: cover;
+  background-position: 0 10px ;
+  z-index: 1;
+  @media (max-width: 800px) {
+    display: none;
+}
+  @media (max-width: 1400px) {
+  bottom: 0;
+  left: 0;
+}
+}
+
+.custom-background::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Position it right above the first image */
+  right: 280px;
+  width: 300px;
+  height: 196px; /* Height of the second image */
+  background: url('../assets/images/bg-2.png') no-repeat right bottom;
+  background-size: cover;
+  background-position: 0 20px;
+  @media (max-width: 1400px) {
+    bottom: 0;
+    right: 0;
+  }
+  @media (max-width: 800px) {
+      background: url('../assets/images/bg-2-sm.png') no-repeat right bottom; /* Use the alternative image */
+      bottom: 0; /* Position it right above the first image */
+      right: 0;
+      width: 160px;
+      height: 104px;
+    }
+  @media (max-width: 576px) {
+    background-position: 50px 0;
+  }
+}
+
+.nav-link {
+  color: #212529;
+  text-align: start;
+}
+.nav-link:hover {
+  color: #569573;
+}
+.nav {
+  box-shadow: 0px 2px 8px #6e6b6714;
+}
+.nav-pills .nav-link.active {
+  color: #212529;
+  background-color: #e0efde;
+}
+.rounded-start-rb {
+  border-radius: 20px 0px 4px 20px;
+}
+
+.gap-custom-4 {
+ gap: 4px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
