@@ -43,7 +43,7 @@
   text-decoration: none;
   font-weight: 700;
 }
-.swiper-slide {
+.border-bottom-custom {
   border-bottom: 1px solid #6c757d;
 }
 .swiper-slide img {
@@ -153,7 +153,7 @@
       height: 104px;
     }
   @media (max-width: 576px) {
-    background-position: 50px 0;
+    background-position: 50px 10px;
   }
 }
 
@@ -181,4 +181,61 @@
 
 .fs-12 {
   font-size: 12px;
+}
+.title-text {
+  font-size: 52px;
+  color: $primary-400;
+}
+.fw-900 {
+  font-weight: 900;
+}
+.mt-minus {
+  margin-top: -60px;
+  @media (max-width: 992px) {
+    margin-top: 0;
+  }
+}
+
+
+//test
+.card {
+  border-radius: 20px;
+  //overflow: hidden;
+}
+.text-overlay {
+  padding: 8px 12px;
+  background-color: #e5f4ff;
+  letter-spacing: 0.28px;
+  border-radius: 100px;
+}
+.swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 20px;
+}
+.radius-top-custom {
+  border-radius: 4px 4px 0 0;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #212529, $alpha: 0.4);
+    transition: opacity 0.5s;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.custom-swipe {
+  display: block;
+  max-width: 196px;
+  width: 100%;
+  min-height: 236px;
+  height: 100%;
+  object-fit: cover;
 }

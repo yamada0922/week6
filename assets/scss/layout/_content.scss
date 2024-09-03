@@ -1,0 +1,36 @@
+.text-accent-200 {
+    color: $accent-200;
+  }
+  
+  .gradient-overlay {
+    position: relative;
+  }
+  .cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  }
+  
+  .read-swipe {
+    display: block;
+    width: 100%;
+    max-width: 196px;
+    max-height: 147px;
+    height: 100%;
+    object-fit: cover;
+  }
+  .read-borer {
+    border-bottom: solid 1px #E9ECEF;
+  }
+  .font-Newsreader {
+    font-family: "Newsreader", serif;
+  }
+  .content-swipe {
+    display: block;
+    width: 100%;
+    min-height: 147px;
+    height: 100%;
+    object-fit: cover;
+  }
