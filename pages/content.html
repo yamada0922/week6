@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <title>contact</title>
+    <title>content</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <div class="container mb-lg-10">
+    <div class="container-fluid mb-lg-10 mb-7">
       <div class="banner h-auto">
         <picture>
           <source media="(min-width: 992px)" srcset="../assets/images/article-banner.png" />
@@ -23,18 +23,18 @@
     </div>
 
     <section>
-      <div class="container mb-lg-7">
+      <div class="container mb-lg-7 mb-5">
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <p class="text-accent-200 mb-lg-4">首頁 / 所有文章 / 私人島嶼的露營奇遇記</p>
-            <h1 class="mb-lg-3">私人島嶼的露營奇遇記</h1>
+            <h2 class="mb-lg-3 mb-1 fs-lg-1 fs-4">私人島嶼的露營奇遇記</h1>
             <time datetime="" class="text-gray-300">2024 / 5 / 1</time>
           </div>
         </div>
       </div>
     </section>
     
-    <section class="mb-lg-10">
+    <section class="mb-lg-10 mb-2">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 gradient-overlay">
@@ -42,73 +42,93 @@
             <div class=" mb-lg-7">
             <p class="mb-0">嗨！我是秘境尋蹤小編 Elly，很高興能與你分享我這段令人心曠神怡的旅程。這不僅僅是一次旅行，更是一場對自然、對內心的深度體悟，一次重新與大自然連結的奇妙旅程。希望透過我的分享，你也能感受到這份自然之美，並找到一份屬於自己的心靈寧靜。</p><br>
             <p>這段旅程的開始，是從一個遙遠的小島。我對於這片土地的認識，僅止於一些遊記和照片，對於它的神秘感與未知感讓我充滿了好奇。一艘小船，帶著我穿越海浪，穿過風暴，終於抵達了這片被大自然雕琢的寶地。當我踏上這片島嶼的那一刻，心中充滿了震撼與喜悅。</p><br>
-            <img src="../assets/images/content-1.png" alt="">
+            <picture>
+              <source media="(min-width: 768px)" srcset="../assets/images/content-1.png" />
+              <img src="../assets/images/content-1-sm.png" alt="" class="border-0 w-100" />
+            </picture>
             </div>
           </div>
-          <div class="d-flex flex-column align-items-center">
-            <p class="text-gray-500">本篇為會員專屬文章，馬上訂閱瀏覽所有內容！</p>
+          <div class="d-flex flex-column align-items-center mt-5">
+            <p class="text-gray-500 fw-bold text-center">本篇為會員專屬文章<br class="d-md-none d-block"><span class="d-md-inline-block d-none">，</span>馬上訂閱瀏覽所有內容！</p>
             <a class="btn btn-secondary-200 py-lg-3 ps-lg-4 rounded-pill fs-lg-5" href="#"
                 role="button">我要訂閱<i class="bi bi-arrow-right ms-2"></i></a>
           </div>
         </div>
       </div>
     </section>
-
-      <section class="py-lg-10 py-8" >
-        <div class="container">
-          <div class="row justify-content-center ">
-            <div class="col-lg-8 mb-lg-7 mb-4">
-              <h2 class="fs-lg-2 fs-4">延伸閱讀</h2>
-            </div>
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <div class="swiper-content w-100 overflow-hidden">
-                  <div class="swiper-wrapper mt-lg-3 mt-9">
-                    <div class="swiper-slide content-swipe w-100 ">
-                      <div class="mb-lg-7 pb-lg-5 d-flex read-borer w-100 me-10">
-                        <picture class="read-swipe">
-                          <source media="(min-width: 992px)" srcset="../assets/images/read-1.png" />
-                          <img class="w-100" src="../assets/images/read-1-sm.png" alt="" class=" me-5">
-                        </picture>
-                        
-                        <div>
-                        <h5>週末說走就走露營記</h5>
-                        <p class="mb-0">遠離塵囂,用全新的眼光重塑生活的舒適本味。徜徉在環山綠野間,在這處隱世私家別墅裡,盡情領略池畔優閒時光,任林間微風撫面,聆聽花鳥嘶啞之音,重拾內心深處的寧靜...</p>
-                        <a href="" class="d-block text-end py-lg-2 fs-5 text-accent-200 fw-bold font-Newsreader pe-lg-5">Read More</a>
+    
+    <section class="pb-lg-10 py-8 pt-lg-4" >
+      <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-12">
+              <h2 class="fs-md-2 fs-4 mb-lg-7 mb-4">延伸閱讀</h2> 
+              <div class="swiper-content w-100 overflow-hidden">
+                <div class="swiper-wrapper flex-md-column flex-row ">
+                  <div class="swiper-slide">
+                    <div class="card mb-lg-7 pb-5 rounded-0 border-top-0 border-end-0  border-start-0 read-border" style="max-width: 855px;">
+                      <div class="row g-0">
+                        <div class="col-lg-4 col-12">
+                          <picture>
+                            <source media="(min-width: 992px)" srcset="../assets/images/read-1.png" />
+                            <img src="../assets/images/read-1-sm.png" alt="" class="mb-lg-0 mb-3 rounded-2" />
+                          </picture>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                          <div class="card-body p-0 ps-lg-5 ps-0" >
+                            <h5 class="card-title">週末說走就走露營記</h5>
+                            <p class="card-text mb-2 pe-md-5">遠離塵囂,用全新的眼光重塑生活的舒適本味。徜徉在環山綠野間,在這處隱世私家別墅裡,盡情領略池畔優閒時光,任林間微風撫面,聆聽花鳥嘶啞之音,重拾內心深處的寧靜...</p>
+                            <a href="" class="card-text text-accent-200 text-end d-block  fw-bold font-Newsreader fs-5  pe-md-5"><p>Read More</p></a>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide content-swipe justify-content-center w-100 ">
-                      <div class="mb-lg-7 pb-lg-5 d-flex read-borer w-100">
-                        <img src="../assets/images/read-1.png" alt="" class="read-swipe me-5">
-                        <div>
-                        <h5>週末說走就走露營記</h5>
-                        <p class="mb-0">遠離塵囂,用全新的眼光重塑生活的舒適本味。徜徉在環山綠野間,在這處隱世私家別墅裡,盡情領略池畔優閒時光,任林間微風撫面,聆聽花鳥嘶啞之音,重拾內心深處的寧靜...</p>
-                        <a href="" class="d-block text-end py-lg-2 fs-5 text-accent-200 fw-bold font-Newsreader pe-lg-5">Read More</a>
-                      </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide content-swipe justify-content-center w-100 ">
-                      <div class="mb-lg-7 pb-lg-5 d-flex read-borer w-100">
-                        <img src="../assets/images/read-1.png" alt="" class="read-swipe me-5">
-                        <div>
-                        <h5>週末說走就走露營記</h5>
-                        <p class="mb-0">遠離塵囂,用全新的眼光重塑生活的舒適本味。徜徉在環山綠野間,在這處隱世私家別墅裡,盡情領略池畔優閒時光,任林間微風撫面,聆聽花鳥嘶啞之音,重拾內心深處的寧靜...</p>
-                        <a href="" class="d-block text-end py-lg-2 fs-5 text-accent-200 fw-bold font-Newsreader pe-lg-5">Read More</a>
-                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card mb-lg-7 pb-5 rounded-0 border-top-0 border-end-0  border-start-0 read-border" style="max-width: 855px;">
+                      <div class="row g-0">
+                        <div class="col-lg-4 col-12">
+                          <picture>
+                            <source media="(min-width: 992px)" srcset="../assets/images/read-2.png" />
+                            <img src="../assets/images/read-2-sm.png" alt="" class="mb-lg-0 mb-3 rounded-2" />
+                          </picture>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                          <div class="card-body p-0 ps-lg-5 ps-0">
+                            <h5 class="card-title">城市野營日記</h5>
+                            <p class="card-text mb-2 pe-md-5">終於!我實現了一個看似瘋狂的想法—在熟悉的城市裡野營一晚。說實話,一開始我也有點懷疑自己,畢竟眾目睽睽之下搭帳篷實在有點怪異。不過漸漸地,這股初時的侷促不安...</p>
+                            <a href="" class="card-text text-accent-200 text-end d-block  fw-bold font-Newsreader fs-5 pe-md-5"><p>Read More</p></a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div class="swiper-slide">
+                    <div class="card mb-lg-7 pb-5 rounded-0 border-top-0 border-end-0  border-start-0 read-border" style="max-width: 855px;">
+                      <div class="row g-0">
+                        <div class="col-lg-4 col-12">
+                          <picture>
+                            <source media="(min-width: 992px)" srcset="../assets/images/read-3.png" />
+                            <img src="../assets/images/read-3-sm.png" alt="" class="mb-lg-0 mb-3 rounded-2" />
+                          </picture>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                          <div class="card-body p-0 ps-lg-5 ps-0" >
+                            <h5 class="card-title text-truncate">和寵物去露營 - 大自然之旅的雙倍體驗</h5>
+                            <p class="card-text mb-2 pe-md-5">說實話,一開始我有點擔心帶著我的狗狗露營會不會太麻煩。畢竟要照顧牠的飲食起居,還得注意牠的安全。不過這次經驗讓我徹底改觀了!出發前,我特意為狗狗準備了適當...</p>
+                            <a href="" class="card-text text-accent-200 text-end d-block  fw-bold font-Newsreader fs-5  pe-md-5"><p>Read More</p></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                </div>
-              </div>
+                
               </div>
             </div>
           </div>
-    </section>
 
+      </div>
+    </section>
       
 
 

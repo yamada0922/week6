@@ -43,18 +43,18 @@ const swiperOne = new Swiper(".swiper-container", {
 
 const swiperConten = new Swiper(".swiper-content", {
   slidesPerView: 1.1,
-  slidesPerGroup: 1,
   spaceBetween: 24,
   pagination: {
     el: ".swiper-pagination",
   },
   breakpoints: {
     768: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       grid: {
         rows: 2,
         fill: "row"
       }
     }
+    
   }
 });
